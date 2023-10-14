@@ -42,6 +42,10 @@ export default function Body() {
         handleOpenFileClick();
     };
 
+    const handleDownloadClick = () =>{
+        
+    }
+
     return (
         <div className='card-container'>
             <div className="card">
@@ -49,7 +53,7 @@ export default function Body() {
                     <div className='convertedfile'>
                         <p className='convertedtext'>Conversion successful! Your text file is ready to dowmload.</p>
                         <div className='afterconversionbutton'>
-                            <button onClick={handleConvertClick}>Download</button>
+                            <button onClick={handleDownloadClick}>Download</button>
                             <button onClick={handleConvertNextClick}>convert Next</button>
                         </div>
 
