@@ -1,12 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../styles/loginform.css'
 
 
-export default function Loginform() {
 
+export default function LoginForm() {
+    const [isLogin, setIsLogin]= useState(true)
+    
+    const handleSwitchClick=()=>{
+        setIsLogin(!isLogin);
+    };
+    
     return (
-        <>
+        <div className='loginForm'>
             <div className="form-section">
+                
                 <div className="switch" id="switch">
                     <div className="row">
                         <img className="logo" src="logo.jpg" alt="logo logo" />
@@ -19,7 +26,8 @@ export default function Loginform() {
                         rerum iste cupiditate, vero ab facilis quibusdam a! Molestias, quasi!
                     </p>
                 </div>
-                <div className="login-form center">
+                {/* <div className="login-form center"> */}
+                <div className="login-form center" style={{ display: isLogin ? 'block' : 'none' }}>
                     <h1>Sign Up</h1>
                     <label htmlFor="">Email:</label>
                     <input className="form-input" type="text" />
@@ -27,24 +35,25 @@ export default function Loginform() {
                     <input className="form-input" type="password" />
                     <label htmlFor="">Password repeat:</label>
                     <input className="form-input" type="password" />
-                    <button className="btn-switch green">Sign Up</button>
+                    <button className="btn-switch">Sign Up</button>
                     <p>
                         Already have an account?<span className="register-link" id="login">Login</span>
                     </p>
                 </div>
-                <div className="signup-form center">
+                {/* <div className="signup-form center"> */}
+                <div className="signup-form center" style={{ display: isLogin ? 'none' : 'block' }}>
                     <h1>Login</h1>
                     <label htmlFor="">Email:</label>
                     <input className="form-input" type="text" />
                     <label htmlFor="">Password:</label>
                     <input className="form-input" type="password" />
-                    <button className="btn-switch">Login</button>
+                    <button className="btn-switch" onClick={handleSwitchClick}>{isLogin ? 'Switch to Signup' : 'Switch to Login'}</button>
                     <p>
                         Don't have account yet?<span className="register-link" id="signup">Register</span>
                     </p>
                 </div>
             </div>
-            <script src="script.js"></script>
-        </>
+            {/* <script src="script.js"></script> */}
+        </div>
     )
 }

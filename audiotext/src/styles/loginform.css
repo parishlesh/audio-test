@@ -4,7 +4,7 @@
     --color-blue: rgb(99, 201, 243);
     --color-green: rgb(92, 195, 151);
   }
-  body {
+  .loginForm {
     background-color: var(--color-grey);
     font-family: "Roboto", sans-serif;
     margin: 0;
@@ -54,9 +54,9 @@
     color: white;
     padding: 20px;
     position: absolute;
-    left: 15px;
+    /* left: 15px; */
     height: 500px;
-    width: 370px;
+    width: 400px;
     background: var(--color-pink);
   }
   .logo {
@@ -66,16 +66,16 @@
     object-fit: fill;
   }
   .btn-switch {
-    background: var(--color-pink);
-    color: white;
+    background: white;
+    color: black;
     font-size: 1.5rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 10px;
     cursor: pointer;
   }
   .btn-switch:hover {
-    background: var(--color-blue);
+    background: white;
   }
   .green {
     background: var(--color-green);
