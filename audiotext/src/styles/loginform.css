@@ -103,3 +103,10 @@ h1 {
     background: blueviolet;
   }
 }
+
+.closeButton{
+  position: absolute;
+  top: 6rem;
+  right: 21rem;
+  color: gray;
+}
