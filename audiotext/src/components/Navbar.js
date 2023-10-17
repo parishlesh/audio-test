@@ -20,8 +20,8 @@ export default function Navbar() {
                         </ul>
                         <ul className='signuplist'>
                             <li>
-                                <button className='signupbutton'>
-                                    <span>Sign Up</span>
+                                <button className='Loginbutton'>
+                                    <span>Login</span>
                                 </button>
                             </li>
                         </ul>
