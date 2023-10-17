@@ -218,7 +218,7 @@ button {
     margin: 0;
 }
 
-  .signupbutton {
+  .Loginbutton {
     display: inline-block;
     border-radius: 4px;
     background-color: #ffffff;
@@ -234,7 +234,7 @@ button {
     border-radius: 15px;
    }
    
-   .signupbutton span {
+   .Loginbutton span {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -243,7 +243,7 @@ button {
 }
 
    
-   .signupbutton span:after {
+   .Loginbutton span:after {
     content: '»';
     position: absolute;
     opacity: 0;
@@ -252,11 +252,11 @@ button {
     transition: 0.5s;
    }
    
-   .signupbutton:hover span {
+   .Loginbutton:hover span {
     padding-right: 15px;
    }
    
-   .signupbutton:hover span:after {
+   .Loginbutton:hover span:after {
     opacity: 1;
     right: 0;
    }
