@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react';
+import LoginForm from './Loginform';
 
 export default function Navbar() {
+    const[btnlogin, setBtnlogin] = useState(false);
+
+    const openLoginForm=()=>{
+        setBtnlogin(true);
+    };
+
+    const closeLoginForm=()=>{
+        setBtnlogin(false);
+    };
+
+    // const toggleLoginForm=()=>{
+    //     if (btnlogin) {
+    //         closeLoginForm();
+    //     } else {
+    //         openLoginForm();
+    //     }
+    // }
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -20,9 +39,14 @@ export default function Navbar() {
                         </ul>
                         <ul className='signuplist'>
                             <li>
-                                <button className='Loginbutton'>
+                                
+                                <button className='Loginbutton' onClick={btnlogin ? closeLoginForm : openLoginForm}>
+                                {/* <button className="Loginbutton" onClick={toggleLoginForm}> */}
                                     <span>Login</span>
                                 </button>
+                                
+                                    {btnlogin && <LoginForm isOpen= {true}/>}
+                                
                             </li>
                         </ul>
                     </div>
