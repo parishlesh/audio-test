@@ -9,7 +9,7 @@ AudioSegment.converter = "C:\\PATH_Programs\\ffmpeg.exe"
 # Convert mp3 file to wav
 
 print("start2")
-sound = AudioSegment.from_mp3("Test1.mp3")
+sound = AudioSegment.from_mp3("Recordingmp3.mp3")
 sound.export("transcript.wav", format="wav")
 print("start3")
 # Transcribe audio file
