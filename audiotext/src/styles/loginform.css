@@ -4,10 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70%;
-  width: 50%;
-  margin: auto;
-  margin-top: 4rem;
+  /* height: 70%; */
+  width: fit-content;
+  /* margin: auto; */
+  /* margin-top: 4rem; */
   flex-wrap: nowrap;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
@@ -52,7 +52,7 @@ h1 {
   position: absolute;
   left: 0rem;
   height: 500px;
-  width: 360px;
+  width: 400px;
   background-color: red;
   z-index: 1;
   transition: 5s ease-in-out;
@@ -106,7 +106,30 @@ h1 {
 
 .closeButton{
   position: absolute;
-  top: 6rem;
+  top: 0;
   right: 21rem;
   color: gray;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
