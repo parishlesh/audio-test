@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import '../styles/loginform.css'
 
-export default function LoginForm(props) {
+export default function LoginForm({btnLogin, setBtnlogin}) {
     const [isLogin, setIsLogin] = useState(true)
-    const [isFormOpen, setIsFormOpen] = useState(props.isOpen);
+    const [isFormOpen, setIsFormOpen] = useState(btnLogin);
+    // const setBtnlogin = {props}
 
 
     const handleSwitchClick = () => {
         setIsLogin(!isLogin);
     };
     const handleCloseClick = () => {
-        setIsFormOpen(false);
+        // setIsFormOpen(false);
+        setBtnlogin(false);
     };
 
     if (!isFormOpen) {
@@ -36,10 +38,10 @@ export default function LoginForm(props) {
                 <div className='form'>
                     <div className={`cover ${isLogin ? 'toRight' : 'toLeft'}`}>
                         <div className="row">
-                            <img className="logo" src="logo.jpg" alt="logo logo" />
-                            <h1>AppName</h1>
+                            <img className="logo" src="logo.jpg" alt="logo logo" /> 
+                            <h1>AudioText</h1>
                         </div>
-                        <h3>What's signup new?</h3>
+                        
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, quia
                             nulla modi nostrum odio sequi repudiandae quasi qui possimus explicabo

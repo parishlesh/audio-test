@@ -4,13 +4,13 @@ import LoginForm from './Loginform';
 export default function Navbar() {
     const[btnlogin, setBtnlogin] = useState(false);
 
-    const openLoginForm=()=>{
-        setBtnlogin(true);
-    };
+    // const openLoginForm=()=>{
+    //     setBtnlogin(true);
+    // };
 
-    const closeLoginForm=()=>{
-        setBtnlogin(false);
-    };
+    // const closeLoginForm=()=>{
+    //     setBtnlogin(false);
+    // };
 
     // const toggleLoginForm=()=>{
     //     if (btnlogin) {
@@ -39,13 +39,13 @@ export default function Navbar() {
                         </ul>
                         <ul className='signuplist'>
                             <li>
-                                
-                                <button className='Loginbutton' onClick={btnlogin ? closeLoginForm : openLoginForm}>
+
+                                <button className='Loginbutton' onClick={() => setBtnlogin(!btnlogin) }>
                                 {/* <button className="Loginbutton" onClick={toggleLoginForm}> */}
                                     <span>Login</span>
                                 </button>
                                 
-                                    {btnlogin && <LoginForm isOpen= {true}/>}
+                                    {btnlogin && <LoginForm setBtnlogin={setBtnlogin} btnLogin={btnlogin}/>}
                                 
                             </li>
                         </ul>
