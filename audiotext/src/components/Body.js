@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/body.css';
+import axios from 'axios'
 
 export default function Body() {
     const [isCardVisible, setCardVisible] = useState(false);
@@ -42,9 +43,31 @@ export default function Body() {
         handleOpenFileClick();
     };
 
-    const handleDownloadClick = () =>{
-        
+    const handleDownloadClick = () => {
+
     }
+
+    //function to make api call to send audio to backend
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData();
+        formData.append('audio', selectedFile);
+
+        try {
+            const {data} = await axios.post('http://127.0.0.1:8000/audio/upload-audio/', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            if(data?.success){
+                //perform set operation
+                // Handle success or display a success message.
+            }
+        } catch (error) {
+            // Handle error or display an error message.
+        }
+    };
 
     return (
         <div className='card-container'>
